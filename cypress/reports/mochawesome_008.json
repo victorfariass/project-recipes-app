@@ -1,0 +1,409 @@
+{
+  "stats": {
+    "suites": 7,
+    "tests": 10,
+    "passes": 7,
+    "pending": 0,
+    "failures": 3,
+    "start": "2021-03-24T12:44:44.691Z",
+    "end": "2021-03-24T12:45:02.048Z",
+    "duration": 17357,
+    "testsRegistered": 10,
+    "passPercent": 70,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "9b19423c-d5da-4e70-aaaf-ebdbb67c8fa6",
+      "title": "",
+      "fullFile": "cypress/integration/done_recipes_spec.js",
+      "file": "cypress/integration/done_recipes_spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "13c07f6e-738c-4a68-82b1-df11e21bee6b",
+          "title": "Done recipes screen",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [],
+          "suites": [
+            {
+              "uuid": "c03c4f6d-18ef-4098-b4b8-77a183b9824d",
+              "title": "54 - Implemente os elementos da tela de receitas feitas respeitando os atributos descritos no protótipo",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Todos os data-testids estão disponíveis",
+                  "fullTitle": "Done recipes screen 54 - Implemente os elementos da tela de receitas feitas respeitando os atributos descritos no protótipo Todos os data-testids estão disponíveis",
+                  "timedOut": null,
+                  "duration": 1022,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.get('[data-testid=\"filter-by-all-btn\"]');\ncy.get('[data-testid=\"filter-by-food-btn\"]');\ncy.get('[data-testid=\"filter-by-drink-btn\"]');\ncy.get('[data-testid=\"0-horizontal-image\"]');\ncy.get('[data-testid=\"0-horizontal-top-text\"]');\ncy.get('[data-testid=\"0-horizontal-name\"]');\ncy.get('[data-testid=\"0-horizontal-done-date\"]');\ncy.get('[data-testid=\"0-horizontal-share-btn\"]');\ncy.get('[data-testid=\"0-Pasta-horizontal-tag\"]');\ncy.get('[data-testid=\"0-Curry-horizontal-tag\"]');\ncy.get('[data-testid=\"1-horizontal-image\"]');\ncy.get('[data-testid=\"1-horizontal-top-text\"]');\ncy.get('[data-testid=\"1-horizontal-name\"]');\ncy.get('[data-testid=\"1-horizontal-share-btn\"]');\ncy.get('[data-testid=\"1-horizontal-done-date\"]');",
+                  "err": {},
+                  "uuid": "a0d37abd-2571-4995-870a-6ab7ca25505a",
+                  "parentUUID": "c03c4f6d-18ef-4098-b4b8-77a183b9824d",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "a0d37abd-2571-4995-870a-6ab7ca25505a"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 1022,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "47cc5cb6-4b11-4edf-a07a-4c868dd98ab1",
+              "title": "55 - Desenvolva a tela de maneira que, caso a receita do card seja uma comida, ela deve possuir: a foto da receita, o nome, a categoria, a area, a data em que a pessoa fez a receita, as 2 primeiras tags retornadas pela API e um botão de compartilhar",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "O card possui os atributos corretos de uma comida",
+                  "fullTitle": "Done recipes screen 55 - Desenvolva a tela de maneira que, caso a receita do card seja uma comida, ela deve possuir: a foto da receita, o nome, a categoria, a area, a data em que a pessoa fez a receita, as 2 primeiras tags retornadas pela API e um botão de compartilhar O card possui os atributos corretos de uma comida",
+                  "timedOut": null,
+                  "duration": 372,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.get('[data-testid=\"0-horizontal-image\"]').should('have.attr', 'src').should('include', doneRecipes[0].image);\ncy.get('[data-testid=\"0-horizontal-top-text\"]').contains(\"\".concat(doneRecipes[0].area, \" - \").concat(doneRecipes[0].category));\ncy.get('[data-testid=\"0-horizontal-name\"]').contains(doneRecipes[0].name);\ncy.get('[data-testid=\"0-horizontal-share-btn\"]').should('have.attr', 'src').should('include', 'shareIcon');\ncy.get('[data-testid=\"0-horizontal-done-date\"]').contains('23/06/2020');\ncy.get('[data-testid=\"0-Pasta-horizontal-tag\"]').contains(doneRecipes[0].tags[0]);\ncy.get('[data-testid=\"0-Curry-horizontal-tag\"]').contains(doneRecipes[0].tags[1]);",
+                  "err": {},
+                  "uuid": "60796532-2c2c-4b50-a7ea-2538e85ca977",
+                  "parentUUID": "47cc5cb6-4b11-4edf-a07a-4c868dd98ab1",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "60796532-2c2c-4b50-a7ea-2538e85ca977"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 372,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "78195d21-78d1-464f-abe6-b29452d5f80d",
+              "title": "56 - Desenvolva a tela de maneira que, caso a receita do card seja uma bebida, ela deve possuir: a foto da receita, o nome, se é alcoólica, a data em que a pessoa fez a receita e um botão de compartilhar",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "O card possui os atributos corretos de uma bebida",
+                  "fullTitle": "Done recipes screen 56 - Desenvolva a tela de maneira que, caso a receita do card seja uma bebida, ela deve possuir: a foto da receita, o nome, se é alcoólica, a data em que a pessoa fez a receita e um botão de compartilhar O card possui os atributos corretos de uma bebida",
+                  "timedOut": null,
+                  "duration": 262,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.get('[data-testid=\"1-horizontal-image\"]').should('have.attr', 'src').should('include', doneRecipes[1].image);\ncy.get('[data-testid=\"1-horizontal-top-text\"]').contains(doneRecipes[1].alcoholicOrNot);\ncy.get('[data-testid=\"1-horizontal-name\"]').contains(doneRecipes[1].name);\ncy.get('[data-testid=\"1-horizontal-share-btn\"]').should('have.attr', 'src').should('include', 'shareIcon');\ncy.get('[data-testid=\"0-horizontal-done-date\"]').contains('23/06/2020');",
+                  "err": {},
+                  "uuid": "0a3a0b4a-d277-40b1-aef4-a1e96a30718b",
+                  "parentUUID": "78195d21-78d1-464f-abe6-b29452d5f80d",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "0a3a0b4a-d277-40b1-aef4-a1e96a30718b"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 262,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "4284740f-7e8c-4f0a-8271-69d31ac68961",
+              "title": "57 - Desenvolva a solução de maneira que o botão de compartilhar deve copiar a URL da tela de detalhes da receita para o clipboard",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Ao clicar no botão de compartilhar deve aparecer a mensagem \"Link copiado!\"",
+                  "fullTitle": "Done recipes screen 57 - Desenvolva a solução de maneira que o botão de compartilhar deve copiar a URL da tela de detalhes da receita para o clipboard Ao clicar no botão de compartilhar deve aparecer a mensagem \"Link copiado!\"",
+                  "timedOut": null,
+                  "duration": 985,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.get('[data-testid=\"0-horizontal-share-btn\"]').click();\ncy.contains('Link copiado!');",
+                  "err": {
+                    "message": "Uncaught Uncaught RangeError: Maximum call stack size exceeded\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application",
+                    "estack": "Uncaught RangeError: Maximum call stack size exceeded\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n    at copy (http://localhost:3000/static/js/main.chunk.js:2671:16)\n    at copy (http://localhost:3000/static/js/main.chunk.js:2672:5)\n    at copy (http://localhost:3000/static/js/main.chunk.js:2672:5)\n    at copy (http://localhost:3000/static/js/main.chunk.js:2672:5)\n    at copy (http://localhost:3000/static/js/main.chunk.js:2672:5)\n    at copy (http://localhost:3000/static/js/main.chunk.js:2672:5)\n    at copy (http://localhost:3000/static/js/main.chunk.js:2672:5)\n    at copy (http://localhost:3000/static/js/main.chunk.js:2672:5)\n    at copy (http://localhost:3000/static/js/main.chunk.js:2672:5)\n    at copy (http://localhost:3000/static/js/main.chunk.js:2672:5)\n    at copy (http://localhost:3000/static/js/main.chunk.js:2672:5)\n    at copy (http://localhost:3000/static/js/main.chunk.js:2672:5)\n    at copy (http://localhost:3000/static/js/main.chunk.js:2672:5)\n    at copy (http://localhost:3000/static/js/main.chunk.js:2672:5)\n    at copy (http://localhost:3000/static/js/main.chunk.js:2672:5)\n    at copy (http://localhost:3000/static/js/main.chunk.js:2672:5)\n    at copy (http://localhost:3000/static/js/main.chunk.js:2672:5)\n    at copy (http://localhost:3000/static/js/main.chunk.js:2672:5)\n    at copy (http://localhost:3000/static/js/main.chunk.js:2672:5)\n    at copy (http://localhost:3000/static/js/main.chunk.js:2672:5)\n    at copy (http://localhost:3000/static/js/main.chunk.js:2672:5)\n    at copy (http://localhost:3000/static/js/main.chunk.js:2672:5)\n    at copy (http://localhost:3000/static/js/main.chunk.js:2672:5)\n    at copy (http://localhost:3000/static/js/main.chunk.js:2672:5)\n    at copy (http://localhost:3000/static/js/main.chunk.js:2672:5)\n    at copy (http://localhost:3000/static/js/main.chunk.js:2672:5)\n    at copy (http://localhost:3000/static/js/main.chunk.js:2672:5)\n    at copy (http://localhost:3000/static/js/main.chunk.js:2672:5)\n    at copy (http://localhost:3000/static/js/main.chunk.js:2672:5)\n    at copy (http://localhost:3000/static/js/main.chunk.js:2672:5)\n    at copy (http://localhost:3000/static/js/main.chunk.js:2672:5)\n    at copy (http://localhost:3000/static/js/main.chunk.js:2672:5)\n    at copy (http://localhost:3000/static/js/main.chunk.js:2672:5)\n    at copy (http://localhost:3000/static/js/main.chunk.js:2672:5)\n    at copy (http://localhost:3000/static/js/main.chunk.js:2672:5)\n    at copy (http://localhost:3000/static/js/main.chunk.js:2672:5)\n    at copy (http://localhost:3000/static/js/main.chunk.js:2672:5)\n    at copy (http://localhost:3000/static/js/main.chunk.js:2672:5)\n    at copy (http://localhost:3000/static/js/main.chunk.js:2672:5)\n    at copy (http://localhost:3000/static/js/main.chunk.js:2672:5)\n    at copy (http://localhost:3000/static/js/main.chunk.js:2672:5)\n    at copy (http://localhost:3000/static/js/main.chunk.js:2672:5)\n    at copy (http://localhost:3000/static/js/main.chunk.js:2672:5)\n    at copy (http://localhost:3000/static/js/main.chunk.js:2672:5)\n    at copy (http://localhost:3000/static/js/main.chunk.js:2672:5)\n    at copy (http://localhost:3000/static/js/main.chunk.js:2672:5)\n    at copy (http://localhost:3000/static/js/main.chunk.js:2672:5)\n    at copy (http://localhost:3000/static/js/main.chunk.js:2672:5)\n    at copy (http://localhost:3000/static/js/main.chunk.js:2672:5)\n    at copy (http://localhost:3000/static/js/main.chunk.js:2672:5)",
+                    "diff": null
+                  },
+                  "uuid": "edcd1cf9-7f9e-43a3-8d32-72c3b1dc6e92",
+                  "parentUUID": "4284740f-7e8c-4f0a-8271-69d31ac68961",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "A URL da tela de detalhes da receita é copiada para o clipboard",
+                  "fullTitle": "Done recipes screen 57 - Desenvolva a solução de maneira que o botão de compartilhar deve copiar a URL da tela de detalhes da receita para o clipboard A URL da tela de detalhes da receita é copiada para o clipboard",
+                  "timedOut": null,
+                  "duration": 924,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.get('[data-testid=\"0-horizontal-share-btn\"]').click();\ncy.window().then(function (win) {\n  cy.wrap(win.navigator.clipboard.readText()).should('eq', 'http://localhost:3000/comidas/52771');\n});",
+                  "err": {
+                    "message": "Uncaught Uncaught RangeError: Maximum call stack size exceeded\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application",
+                    "estack": "Uncaught RangeError: Maximum call stack size exceeded\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n    at copy (http://localhost:3000/static/js/main.chunk.js:2671:16)\n    at copy (http://localhost:3000/static/js/main.chunk.js:2672:5)\n    at copy (http://localhost:3000/static/js/main.chunk.js:2672:5)\n    at copy (http://localhost:3000/static/js/main.chunk.js:2672:5)\n    at copy (http://localhost:3000/static/js/main.chunk.js:2672:5)\n    at copy (http://localhost:3000/static/js/main.chunk.js:2672:5)\n    at copy (http://localhost:3000/static/js/main.chunk.js:2672:5)\n    at copy (http://localhost:3000/static/js/main.chunk.js:2672:5)\n    at copy (http://localhost:3000/static/js/main.chunk.js:2672:5)\n    at copy (http://localhost:3000/static/js/main.chunk.js:2672:5)\n    at copy (http://localhost:3000/static/js/main.chunk.js:2672:5)\n    at copy (http://localhost:3000/static/js/main.chunk.js:2672:5)\n    at copy (http://localhost:3000/static/js/main.chunk.js:2672:5)\n    at copy (http://localhost:3000/static/js/main.chunk.js:2672:5)\n    at copy (http://localhost:3000/static/js/main.chunk.js:2672:5)\n    at copy (http://localhost:3000/static/js/main.chunk.js:2672:5)\n    at copy (http://localhost:3000/static/js/main.chunk.js:2672:5)\n    at copy (http://localhost:3000/static/js/main.chunk.js:2672:5)\n    at copy (http://localhost:3000/static/js/main.chunk.js:2672:5)\n    at copy (http://localhost:3000/static/js/main.chunk.js:2672:5)\n    at copy (http://localhost:3000/static/js/main.chunk.js:2672:5)\n    at copy (http://localhost:3000/static/js/main.chunk.js:2672:5)\n    at copy (http://localhost:3000/static/js/main.chunk.js:2672:5)\n    at copy (http://localhost:3000/static/js/main.chunk.js:2672:5)\n    at copy (http://localhost:3000/static/js/main.chunk.js:2672:5)\n    at copy (http://localhost:3000/static/js/main.chunk.js:2672:5)\n    at copy (http://localhost:3000/static/js/main.chunk.js:2672:5)\n    at copy (http://localhost:3000/static/js/main.chunk.js:2672:5)\n    at copy (http://localhost:3000/static/js/main.chunk.js:2672:5)\n    at copy (http://localhost:3000/static/js/main.chunk.js:2672:5)\n    at copy (http://localhost:3000/static/js/main.chunk.js:2672:5)\n    at copy (http://localhost:3000/static/js/main.chunk.js:2672:5)\n    at copy (http://localhost:3000/static/js/main.chunk.js:2672:5)\n    at copy (http://localhost:3000/static/js/main.chunk.js:2672:5)\n    at copy (http://localhost:3000/static/js/main.chunk.js:2672:5)\n    at copy (http://localhost:3000/static/js/main.chunk.js:2672:5)\n    at copy (http://localhost:3000/static/js/main.chunk.js:2672:5)\n    at copy (http://localhost:3000/static/js/main.chunk.js:2672:5)\n    at copy (http://localhost:3000/static/js/main.chunk.js:2672:5)\n    at copy (http://localhost:3000/static/js/main.chunk.js:2672:5)\n    at copy (http://localhost:3000/static/js/main.chunk.js:2672:5)\n    at copy (http://localhost:3000/static/js/main.chunk.js:2672:5)\n    at copy (http://localhost:3000/static/js/main.chunk.js:2672:5)\n    at copy (http://localhost:3000/static/js/main.chunk.js:2672:5)\n    at copy (http://localhost:3000/static/js/main.chunk.js:2672:5)\n    at copy (http://localhost:3000/static/js/main.chunk.js:2672:5)\n    at copy (http://localhost:3000/static/js/main.chunk.js:2672:5)\n    at copy (http://localhost:3000/static/js/main.chunk.js:2672:5)\n    at copy (http://localhost:3000/static/js/main.chunk.js:2672:5)\n    at copy (http://localhost:3000/static/js/main.chunk.js:2672:5)",
+                    "diff": null
+                  },
+                  "uuid": "55513cf5-0c4b-4aea-bc9d-7f72dc8d9248",
+                  "parentUUID": "4284740f-7e8c-4f0a-8271-69d31ac68961",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [],
+              "failures": [
+                "edcd1cf9-7f9e-43a3-8d32-72c3b1dc6e92",
+                "55513cf5-0c4b-4aea-bc9d-7f72dc8d9248"
+              ],
+              "pending": [],
+              "skipped": [],
+              "duration": 1909,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "fcd25a7c-6bf2-4699-a4cb-8c00da17289b",
+              "title": "58 - Implemente 2 botões que filtram as receitas por comida ou bebida e um terceiro que remove todos os filtros",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Ao clicar no botão \"Food\" as receitas devem ser filtradas por comidas",
+                  "fullTitle": "Done recipes screen 58 - Implemente 2 botões que filtram as receitas por comida ou bebida e um terceiro que remove todos os filtros Ao clicar no botão \"Food\" as receitas devem ser filtradas por comidas",
+                  "timedOut": null,
+                  "duration": 333,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.get('[data-testid=\"filter-by-food-btn\"]').click();\ncy.get('[data-testid=\"0-horizontal-name\"]').contains(doneRecipes[0].name);\ncy.get('[data-testid=\"1-horizontal-name\"]').should('not.exist');",
+                  "err": {},
+                  "uuid": "c511c70e-73f2-4040-97ff-181d339c9e72",
+                  "parentUUID": "fcd25a7c-6bf2-4699-a4cb-8c00da17289b",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Ao clicar no botão \"Drinks\" as receitas devem ser filtradas por bebidas",
+                  "fullTitle": "Done recipes screen 58 - Implemente 2 botões que filtram as receitas por comida ou bebida e um terceiro que remove todos os filtros Ao clicar no botão \"Drinks\" as receitas devem ser filtradas por bebidas",
+                  "timedOut": null,
+                  "duration": 262,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.get('[data-testid=\"filter-by-drink-btn\"]').click();\ncy.get('[data-testid=\"0-horizontal-name\"]').contains(doneRecipes[1].name);\ncy.get('[data-testid=\"1-horizontal-name\"]').should('not.exist');",
+                  "err": {},
+                  "uuid": "1ab3efbe-f32d-45a4-bb9f-ae10c4699bfb",
+                  "parentUUID": "fcd25a7c-6bf2-4699-a4cb-8c00da17289b",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Ao clicar no botão \"All\" o filtro deve ser removido",
+                  "fullTitle": "Done recipes screen 58 - Implemente 2 botões que filtram as receitas por comida ou bebida e um terceiro que remove todos os filtros Ao clicar no botão \"All\" o filtro deve ser removido",
+                  "timedOut": null,
+                  "duration": 511,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.get('[data-testid=\"filter-by-food-btn\"]').click();\ncy.get('[data-testid=\"filter-by-all-btn\"]').click();\ncy.get('[data-testid=\"0-horizontal-name\"]').contains(doneRecipes[0].name);\ncy.get('[data-testid=\"1-horizontal-name\"]').contains(doneRecipes[1].name);",
+                  "err": {},
+                  "uuid": "5a2accb9-595f-45f9-8336-9848d2cdcb71",
+                  "parentUUID": "fcd25a7c-6bf2-4699-a4cb-8c00da17289b",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "c511c70e-73f2-4040-97ff-181d339c9e72",
+                "1ab3efbe-f32d-45a4-bb9f-ae10c4699bfb",
+                "5a2accb9-595f-45f9-8336-9848d2cdcb71"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 1106,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "6cb03e81-2fb7-48f5-b12f-a8c6d95570f2",
+              "title": "59 - Redirecione para a tela de detalhes da receita caso seja clicado na foto ou no nome da receita",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Ao clicar na foto da receita, a rota deve mudar para a tela de detalhes daquela receita",
+                  "fullTitle": "Done recipes screen 59 - Redirecione para a tela de detalhes da receita caso seja clicado na foto ou no nome da receita Ao clicar na foto da receita, a rota deve mudar para a tela de detalhes daquela receita",
+                  "timedOut": null,
+                  "duration": 10669,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.get('[data-testid=\"0-horizontal-image\"]').click();\ncy.location().should(function (loc) {\n  return expect(loc.pathname).to.eq('/comidas/52771');\n});",
+                  "err": {
+                    "message": "CypressError: Timed out retrying: cy.click() failed because the center of this element is hidden from view:\n\n<img src=\"https://www.themealdb.com/images/media/meals/ustsqw1468250014.jpg\" data-testid=\"0-horizontal-image\" alt=\"Spicy Arrabiata Penne\">\n\nFix this problem, or use {force: true} to disable error checking.\n\nhttps://on.cypress.io/element-cannot-be-interacted-with",
+                    "estack": "CypressError: Timed out retrying: cy.click() failed because the center of this element is hidden from view:\n\n<img src=\"https://www.themealdb.com/images/media/meals/ustsqw1468250014.jpg\" data-testid=\"0-horizontal-image\" alt=\"Spicy Arrabiata Penne\">\n\nFix this problem, or use {force: true} to disable error checking.\n\nhttps://on.cypress.io/element-cannot-be-interacted-with\n    at Object.cypressErr (http://localhost:3000/__cypress/runner/cypress_runner.js:86207:11)\n    at Object.throwErr (http://localhost:3000/__cypress/runner/cypress_runner.js:86162:18)\n    at Object.throwErrByPath (http://localhost:3000/__cypress/runner/cypress_runner.js:86194:17)\n    at Object.retry (http://localhost:3000/__cypress/runner/cypress_runner.js:76849:16)\n    at retryActionability (http://localhost:3000/__cypress/runner/cypress_runner.js:65238:19)\n    at tryCatcher (http://localhost:3000/__cypress/runner/cypress_runner.js:120203:23)\n    at Function.Promise.attempt.Promise.try (http://localhost:3000/__cypress/runner/cypress_runner.js:117478:29)\n    at tryFn (http://localhost:3000/__cypress/runner/cypress_runner.js:77307:21)\n    at whenStable (http://localhost:3000/__cypress/runner/cypress_runner.js:77342:12)\n    at http://localhost:3000/__cypress/runner/cypress_runner.js:76892:16\n    at tryCatcher (http://localhost:3000/__cypress/runner/cypress_runner.js:120203:23)\n    at Promise._settlePromiseFromHandler (http://localhost:3000/__cypress/runner/cypress_runner.js:118139:31)\n    at Promise._settlePromise (http://localhost:3000/__cypress/runner/cypress_runner.js:118196:18)\n    at Promise._settlePromise0 (http://localhost:3000/__cypress/runner/cypress_runner.js:118241:10)\n    at Promise._settlePromises (http://localhost:3000/__cypress/runner/cypress_runner.js:118320:18)\n    at Promise._fulfill (http://localhost:3000/__cypress/runner/cypress_runner.js:118265:18)",
+                    "diff": null
+                  },
+                  "uuid": "e37a72f1-bcfa-4b95-83c8-ff4c1942e1c7",
+                  "parentUUID": "6cb03e81-2fb7-48f5-b12f-a8c6d95570f2",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Ao clicar no nome da receita, a rota deve mudar para a tela de detalhes daquela receita",
+                  "fullTitle": "Done recipes screen 59 - Redirecione para a tela de detalhes da receita caso seja clicado na foto ou no nome da receita Ao clicar no nome da receita, a rota deve mudar para a tela de detalhes daquela receita",
+                  "timedOut": null,
+                  "duration": 340,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.get('[data-testid=\"1-horizontal-name\"]').click();\ncy.location().should(function (loc) {\n  return expect(loc.pathname).to.eq('/bebidas/178319');\n});",
+                  "err": {},
+                  "uuid": "d27570cc-06cb-41fb-8f62-9c980422881f",
+                  "parentUUID": "6cb03e81-2fb7-48f5-b12f-a8c6d95570f2",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "d27570cc-06cb-41fb-8f62-9c980422881f"
+              ],
+              "failures": [
+                "e37a72f1-bcfa-4b95-83c8-ff4c1942e1c7"
+              ],
+              "pending": [],
+              "skipped": [],
+              "duration": 11009,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            }
+          ],
+          "passes": [],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "8.2.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.1"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.1.0"
+    }
+  }
+}
